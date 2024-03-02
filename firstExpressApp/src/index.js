@@ -71,7 +71,7 @@ app.get("/products/:product_id/rating/:rate",(req,res) => {
     return res.json({productId: pid,rating:rate});
 })
 
-
+//query param
 //http://localhost:3000/search?q=laptop&category=electronics&page=1
 app.get("/search", (req, res) => {
     const query = req.query.q; 
@@ -84,7 +84,7 @@ app.get("/search", (req, res) => {
     // For example, search for items based on the query and category, and paginate the results
 
     // Respond with a JSON object containing the query parameters
-    res.json({ query: query, category: category, page: page });
+    return res.json({ query: query, category: category, page: page });
 });
 
 /***
